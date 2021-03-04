@@ -6,6 +6,7 @@ public class Angajat extends Aplicant{
 	private String ocupatie;
 	private int salariu;
 	
+	
 	public String getOcupatie() {
 		return ocupatie;
 	}
