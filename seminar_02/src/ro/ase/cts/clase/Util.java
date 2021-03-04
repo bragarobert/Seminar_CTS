@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Utils {
+public class Util {
 
 	public static List<Student> readStudents(String file) throws FileNotFoundException, NumberFormatException {
 		Scanner input = new Scanner(new File(file));
@@ -90,16 +90,16 @@ public class Utils {
 		try {
 			System.out.println("aasdasdasdas =>>>>>>>>>>.");
 
-			listaelevi = Utils.readPupil("elevi.txt");
+			listaelevi = Util.readPupil("elevi.txt");
 
 			for (int i = 0; i < listaelevi.size(); i++)
 				System.out.println(listaelevi.get(i).toString());
 
-			listastudenti = Utils.readStudents("studenti.txt");
+			listastudenti = Util.readStudents("studenti.txt");
 			for (int i = 0; i < listastudenti.size(); i++)
 				System.out.println(listastudenti.get(i).toString());
 
-			listaangajati = Utils.readAngajati("angajati.txt");
+			listaangajati = Util.readAngajati("angajati.txt");
 			for (int i = 0; i < listaangajati.size(); i++)
 				System.out.println(listaangajati.get(i).toString());
 		} catch (IOException e) {
