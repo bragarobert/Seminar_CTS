@@ -4,8 +4,8 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 import ro.ase.cts.clase.Aplicant;
-import ro.ase.cts.readers.AngajatReader;
 import ro.ase.cts.readers.AplicantReader;
+import ro.ase.cts.readers.StudentReader;
 
 public class Program {
 	
@@ -18,9 +18,12 @@ public class Program {
 		try {
 //			listaAplicanti = StudentReader.readStudents("studenti.txt");	// dependency , Liskov
 			
-			listaAplicanti = readAplicants(new AngajatReader("angajati.txt"));
+			listaAplicanti = readAplicants(new StudentReader("studenti.txt"));
 			for(Aplicant aplicant:listaAplicanti)
-				System.out.println(aplicant.toString());	
+				{
+					System.out.println(aplicant.toString());
+					aplicant.afiseazaSumaFinantata();
+				}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
