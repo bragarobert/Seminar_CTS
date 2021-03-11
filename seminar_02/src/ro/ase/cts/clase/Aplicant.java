@@ -1,4 +1,7 @@
 package ro.ase.cts.clase;
+
+import java.util.Arrays;
+
 public abstract class Aplicant{
 	protected String nume;
 	protected String prenume;
@@ -69,5 +72,12 @@ public abstract class Aplicant{
 	}
 	
 	public abstract void  afiseazaSumaFinantata();
+	@Override
+	public String toString() {
+		return " [Nume=" + nume + ", prenume=" + prenume + ", varsta=" + varsta + ", punctaj=" + punctaj
+				+ ", nr_proiecte=" + nr_proiecte + ", denumireProiect=" + Arrays.toString(denumireProiect);
+	}
+	
+	
 	
 }

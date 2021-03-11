@@ -3,7 +3,10 @@ package ro.ase.cts.program;
 import java.io.FileNotFoundException;
 import java.util.List;
 
+import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
+import ro.ase.cts.clase.Student;
+import ro.ase.cts.readers.AngajatReader;
 import ro.ase.cts.readers.AplicantReader;
 import ro.ase.cts.readers.StudentReader;
 
@@ -16,9 +19,10 @@ public class Program {
 	public static void main(String[] args) {
 		List<Aplicant> listaAplicanti;	//
 		try {
-//			listaAplicanti = StudentReader.readStudents("studenti.txt");	// dependency , Liskov
+			System.out.println("Suma finantata student: "+Student.getSumaFinantata());
+			System.out.println("Suma finantata angajat: "+Angajat.getSumaFinantata());
 			
-			listaAplicanti = readAplicants(new StudentReader("studenti.txt"));
+			listaAplicanti = readAplicants(new AngajatReader("angajati.txt"));
 			for(Aplicant aplicant:listaAplicanti)
 				{
 					System.out.println(aplicant.toString());
